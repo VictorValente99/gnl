@@ -6,7 +6,7 @@
 /*   By: victde-s <victde-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:59:33 by victde-s          #+#    #+#             */
-/*   Updated: 2025/11/03 19:25:42 by victde-s         ###   ########.fr       */
+/*   Updated: 2025/11/03 19:31:08 by victde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,4 +107,3 @@ char	*ft_update_stash(char *stash)
 	free(stash);
 	return (new);
 	}
-	
