@@ -6,7 +6,7 @@
 /*   By: victde-s <victde-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:25:28 by victde-s          #+#    #+#             */
-/*   Updated: 2025/10/27 18:33:50 by victde-s         ###   ########.fr       */
+/*   Updated: 2025/11/03 18:28:04 by victde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char *stash_me(int fd, char *stash)
 		if (bytes < 0)
 			return (free(temp), free(stash), NULL);
 		temp[bytes] = '\0';
-		stash = ft_(stash, temp);
+		stash = ft_strjoin(stash, temp);
 		if (!stash)
 			return (free(temp), NULL);
 	}

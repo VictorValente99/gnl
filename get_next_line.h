@@ -6,7 +6,7 @@
 /*   By: victde-s <victde-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:12:04 by victde-s          #+#    #+#             */
-/*   Updated: 2025/10/27 18:20:16 by victde-s         ###   ########.fr       */
+/*   Updated: 2025/11/03 18:28:26 by victde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@
 
 char *stash_me(int fd, char *stash);
 char	*get_next_line(int fd);
-size_t	ft_strlen(const char *s);
+size_t	ft_len(const char *s);
 char	*ft_strchr(const char *s, int c);
+char *ft_strjoin(char *str1, char *str2);
+
 
 #endif
