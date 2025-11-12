@@ -6,7 +6,7 @@
 /*   By: victde-s <victde-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:59:33 by victde-s          #+#    #+#             */
-/*   Updated: 2025/11/03 19:31:08 by victde-s         ###   ########.fr       */
+/*   Updated: 2025/11/12 15:20:56 by victde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,15 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == (char)c)
-			return((char *)s);
+			return ((char *)s);
 		s++;
 	}
 	if (c == '\0')
 		return ((char *)s);
 	return (NULL);
 }
-char *ft_strjoin(char *str1, char *str2)
+
+char	*ft_strjoin(char *str1, char *str2)
 {
 	int		i;
 	int		j;
@@ -46,10 +47,10 @@ char *ft_strjoin(char *str1, char *str2)
 
 	i = 0;
 	if (!str1 || !str2)
-	return (NULL);
+		return (NULL);
 	joined = malloc(ft_len(str1) + ft_len(str2) + 1);
 	if (!joined)
-	return (NULL);
+		return (NULL);
 	while (str1[i] != '\0')
 	{
 		joined[i] = str1[i];
@@ -62,7 +63,8 @@ char *ft_strjoin(char *str1, char *str2)
 	free(str1);
 	return (joined);
 }
-char *ft_get_line(char *stash)
+
+char	*ft_get_line(char *stash)
 {
 	size_t	i;
 	char	*line;
@@ -86,14 +88,15 @@ char *ft_get_line(char *stash)
 	line[i] = '\0';
 	return (line);
 }
+
 char	*ft_update_stash(char *stash)
 {
-	 size_t	i;
-	 size_t	j;
-	 char	*new;
+	size_t	i;
+	size_t	j;
+	char	*new;
 
-	 i = 0;
-	 while (stash[i] && stash[i] != '\n')
+	i = 0;
+	while (stash[i] && stash[i] != '\n')
 		i++;
 	if (!stash[i++])
 		return (free(stash), NULL);
@@ -106,4 +109,4 @@ char	*ft_update_stash(char *stash)
 	new[j] = '\0';
 	free(stash);
 	return (new);
-	}
+}

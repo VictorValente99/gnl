@@ -6,17 +6,17 @@
 /*   By: victde-s <victde-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:25:28 by victde-s          #+#    #+#             */
-/*   Updated: 2025/11/03 18:28:04 by victde-s         ###   ########.fr       */
+/*   Updated: 2025/11/12 15:17:27 by victde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char *stash_me(int fd, char *stash)
+char	*stash_me(int fd, char *stash)
 {
 	char		*temp;
 	ssize_t		bytes;
-	
+
 	temp = malloc(BUFFER_SIZE + 1);
 	if (!temp)
 		return (NULL);
