@@ -6,7 +6,7 @@
 /*   By: victde-s <victde-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:25:28 by victde-s          #+#    #+#             */
-/*   Updated: 2025/11/12 15:17:27 by victde-s         ###   ########.fr       */
+/*   Updated: 2025/11/12 15:45:58 by victde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*get_next_line(int fd)
 	stash = stash_me(fd, stash);
 	if (!stash)
 		return (NULL);
-	line = ft_;
-	stash = ft_;
+	line = ft_get_line(stash);
+	stash = ft_update_stash(stash);
 	return (line);
 }

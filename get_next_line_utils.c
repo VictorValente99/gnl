@@ -6,7 +6,7 @@
 /*   By: victde-s <victde-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:59:33 by victde-s          #+#    #+#             */
-/*   Updated: 2025/11/12 15:20:56 by victde-s         ###   ########.fr       */
+/*   Updated: 2025/11/12 15:54:26 by victde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_len(const char *str1)
 	size_t	i;
 
 	if (!str1)
-		return (NULL);
+		return (0);
 	i = 0;
 	while (str1[i] != '\0')
 		i++;
@@ -46,18 +46,18 @@ char	*ft_strjoin(char *str1, char *str2)
 	char	*joined;
 
 	i = 0;
-	if (!str1 || !str2)
+	if (!str1 && !str2)
 		return (NULL);
 	joined = malloc(ft_len(str1) + ft_len(str2) + 1);
 	if (!joined)
-		return (NULL);
-	while (str1[i] != '\0')
+		return (free(str1), NULL);
+	while (str1 && str1[i])
 	{
 		joined[i] = str1[i];
 		i++;
 	}
 	j = 0;
-	while (str2[j] != '\0')
+	while (str2 && str2[j])
 		joined[i++] = str2[j++];
 	joined[i] = '\0';
 	free(str1);
